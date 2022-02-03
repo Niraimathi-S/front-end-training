@@ -1,0 +1,188 @@
+
+.resume{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #6f7ca6;
+    width: 1000px;
+    margin:auto;
+    font-size: 15px;
+}
+
+h1{
+    font: weight 100px;
+    color: #334680;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.name{
+    text-align: center;
+}
+
+.description{
+    text-align:justify ;
+}
+
+div{
+    display: flex;
+}
+
+.right{
+    display: block;
+    padding: 3%;
+    margin: auto;
+    width: 70%;
+}
+
+.left{
+    display: block;
+    padding:3%;
+    margin: 25px auto;
+    width: 30%;
+
+}
+
+.left-list{
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.rows{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-bottom:1px solid #dddddf;
+}
+
+.work, .education, .summary{
+    display: block;
+}
+
+.material-icons-outlined{
+    color: #b7bcce;
+    padding: 0px 10px 0px 0px;
+    font-size: 95%;
+}
+
+.image{
+    border-radius: 50%;
+    width: 60%;
+    height: 60%;
+}
+
+h5{
+    color: #b7bcce;
+    margin: 0px;
+    padding: 0px;
+}
+
+.left-profile{
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+
+h3{
+    font-size:larger;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+}
+
+.personal_data{
+    font-weight:1000;
+    color: #334680;
+}
+
+.work-row{
+    display: flex;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.work-right-col{
+    float: right;
+    display: block;
+    text-align: right;
+    margin: auto auto auto 120px;
+  
+}
+
+.duration{
+    display: flex;
+    float: right;
+    align-items: center;
+    margin: 0px auto auto auto;
+    
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+    padding-top: 1px;
+}
+
+.download-button{
+    background-color: #367cff;
+    color: white;
+    font-size: small;
+    font-weight:1000;
+    border-radius: 7px;
+    margin: 30px auto auto auto;  
+    width: 200px;
+    height: 40px;
+    border: white;
+}
+
+.fulltime{
+    position: relative; 
+    background-color: #d7ffe0;
+    width: 90px;
+    height: 25px;
+    border: white;
+    border-radius: 10px;
+    color:#334680 ;
+    font-weight: bold;
+    margin: auto;
+    float: right;
+}
+
+.work-right{
+    float: right;
+}
+
+.row-left{
+    float: left;
+    width:60% ;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.row-right{
+    position: relative;
+    float: right;
+    width: 40%;   
+}
+.row-right-button{
+    position: relative;
+    float: right;
+    width: 30%;
+    left: 90px;
+}
+
+.row-border{
+    padding-bottom: 30px;
+    border-bottom:1px solid #dddddf;
+}
+
+#last-row{
+    border-bottom:1px solid white;
+}
+
+#year.duration{
+    position: relative;
+    left: 43px;
+}
+
+.city{
+    width: 130px;
+}
