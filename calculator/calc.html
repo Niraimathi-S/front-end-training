@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="calc.css">
+</head>
+
+<body>
+    <div class="display">
+        <div class="outline">
+        <div class="rows"><input type="text" id="screen"></div>
+        <div class="number-pad">
+            <div class="rows">
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn">/</button>
+            </div>
+            <div class="rows">
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn">*</button>
+            </div>
+            <div class="rows">
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">-</button>
+            </div>
+            <div class="rows">
+                <button class="btn">.</button>
+                <button class="btn">0</button>
+                <button class="btn">+</button>
+                <button class="red-btn" id ="clear-btn">c</button>
+            </div>
+            <div class="rows">
+                <button id="button-equalto" class=" red-btn">=</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        function display() {
+            document.getElementById("screen").value += this.innerHTML;
+        }
+
+        function clear(){
+            document.getElementById("screen").value = "";
+        }
+
+        function result(){
+            let input = document.getElementById("screen").value;
+            let pattern = new RegExp("[[0-9][[*+\\.\\-/]{0,1}[0-9]]*]*");
+            if(pattern.test(input)){ 
+                let output = eval(input);
+                document.getElementById("screen").value = output;
+            } else {
+                document.getElementById("screen").value = "Error";
+            }
+        }
+
+        const buttons = document.getElementsByClassName("btn");
+        document.getElementById("clear-btn").addEventListener('click', clear);
+        document.getElementById("button-equalto").addEventListener('click', result);
+        
+        for(let b=0; b<buttons.length; b++) {
+            buttons[b].addEventListener('click',display);
+        }
+    </script>
+</body>
+
+</html>

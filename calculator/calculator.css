@@ -1,0 +1,51 @@
+body{
+    padding: 50px;
+    background-color: #88e7fb;
+}
+
+.outline{
+    width: 380px;
+    height: 520px;
+    background-color: black;
+    margin: auto;
+    border-radius: 20px;
+}
+
+#screen{
+    width: 330px;
+    height: 65px;
+    margin: 30px 25px 10px 25px;
+    padding: 0 10px;
+}
+
+.number-pad{
+    width: 322px;
+    height: 390px;
+    margin: auto 29px;
+}
+
+button{
+    width: 65px;
+    height: 65px;
+    margin: 5px;
+    padding: 0px;
+    border-radius: 5px;
+    font-size: 20px;
+    border:white;
+}
+
+#button-equalto{
+    width: 300px;
+    height: 60px;
+    margin: 5px;
+}
+
+ .red-btn{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+ }
+
+.rows{
+    margin: 5px;
+}
