@@ -1,0 +1,237 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: SegoeUI-SemiBold-final,Segoe UI Semibold,SegoeUI-Regular-final,Segoe UI,"Segoe UI Web (West European)",Segoe,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Tahoma,Helvetica,Arial,sans-serif;;
+    /* font-family: "Helvetica"; */
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background-color: #F4F4F4;
+    height: 100%;
+
+}
+.header{
+    /* height: 53px; */
+    height: 5.6%;
+    width: 100%;
+    background-color: #0278D7;
+    /* display: flex; */
+}
+
+.ms-Icon{
+    /* color: white; */
+    font-weight:100;
+    /* font-weight: lighter; */
+    margin: 17px 17px 18px 17px;
+    font-size: 17.5px;
+    /* margin: 17px 17px 15px 17px; */
+    
+    /* margin:0 auto; */
+}
+
+.header-row{
+    height: 53px;
+    /* background-color: yellow; */
+    display: flex;
+    align-items:center;
+    color: white;
+    font-size: 18px;
+    
+    bottom: 20px;
+    /* line-height: 15px; */
+    
+}
+
+.header-items{
+    margin: 18px 16px 17px 11px;
+    line-height: 20px;
+}
+
+.header-row span{
+    font-stretch:ultra-expanded;
+    font-weight: 550;
+}
+
+.search-bar{
+    height: 35px;
+    width: 23.7%;
+    margin: 9px auto auto 29%;
+    border-radius: 2px;
+    border: 0px;
+    text-align: left;
+    background-color: #C3DCF7;
+}
+
+.header-right .profile-img{
+    /* position: relative; */
+    /* display: inline-block; */
+    /* width:4%; */
+    /* height: 2%;
+    border-radius: 50%;
+    border:1px solid white;
+    padding: 10px;
+    margin: 10px 10px 15px 10px; */
+    width: 24px;
+    height:24px;
+    text-align: center;
+    margin: 8px 9px;
+    padding: 5px;
+    border:1px solid white;
+    border-radius: 60%;
+    font-weight: 100;
+}
+.header-right .ms-Icon{
+    font-weight:100;
+    /* font-weight: lighter; */
+    margin: 17px 17px 20px 17px;
+    font-size: 18px;
+    /* margin: auto ; */
+}
+
+.search-icon{
+    position: absolute;
+    margin-left: 36.2%;
+    /* transform: scaleX(-1); */
+    color:#3B83F1 ;
+    font-weight: lighter;
+    border: 0px;
+}
+
+.header-right .question-mark{
+    font-size: 21px;
+    font-weight: 100;
+    margin: 17px 17px 20px 17px;
+    /* margin: auto; */
+}
+
+.header-right{
+    height: 53px;
+    display: flex;
+}
+
+#open-nav{
+    /* position: absolute; */
+    /* margin-top: 30px;
+    margin-left: 27px; */
+    color: rgba(53, 53, 53, 0.712);
+    border: white;
+    background-color: #F4F4F4;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+}
+
+#open-nav:hover{
+    background-color: rgba(211, 211, 211, 0.24);
+    border:1px solid rgba(211, 211, 211, 0.432);
+    /* padding: 10px; */
+}
+
+.open-nav-btn{
+    margin: 0px;
+}
+
+.menu{
+    margin:23px 15px 10px 9px;
+}
+
+.left-header{
+    margin:23px 15px 10px 9px;
+    /* background-color: #F4F4F4; */
+    background-color: white;
+
+}
+
+.left-list .ms-Icon{
+    margin: 10px 13px 11px 17px;
+    padding-top: 2px;
+    font-size: 17px;
+    color: grey;
+}
+
+.left-list{
+    /* top: 30px; */
+    margin-top: 15px;
+    position: relative;
+    /* text-align: left; */
+    /* vertical-align: middle; */
+}
+
+#container-left{
+    position: absolute;
+    width: 17.5%;
+    height: 94.4%;
+    z-index: 1;
+    top: 53px;
+    left: 0%;
+    background-color: #F4F4F4;
+
+    /* background-color: #F4F4F4; */
+    /* background-color: white; */
+    /* height:100%; */
+}
+
+.left-list span{
+    font-size: 15px;
+    padding: 2px;
+    /* margin: 2px auto; */
+    /* padding-bottom: 10px; */
+    /* background-color: lightpink; */
+    /* line-height: 14px; */
+
+}
+
+.left-list li:hover{
+    background-color:lightgrey;
+}
+
+.list-row{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.left-footer{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    height: 5%;
+    background-color: indianred;
+    /* top:-100%; */
+    bottom: 0%;
+}
+
+#container-middle{
+    position: relative;
+    width: 82.5%;
+    height: 94.4%;
+    left: 17.5%;
+    top: 0;
+    background-color: white;
+}
+
+/* .open-nav-middle{
+    background-color: white;
+    color: rgba(53, 53, 53, 0.712);
+    border: white;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+} */
+
+#close-nav{
+    position: relative;
+    color: rgba(53, 53, 53, 0.712);
+    border: 1px solid white;
+    background-color: #F4F4F4;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    left: 0;
+}
+
+

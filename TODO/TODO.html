@@ -1,0 +1,242 @@
+<html>
+
+<head>
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="TODO.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-left">
+            <i class="ms-Icon"></i>
+            <span class="page-title">To Do</span>
+        </div>
+        <div class="header-middle">
+            <input class="search-bar" type="text">
+            <i class="search-icon ms-Icon"></i>
+        </div>
+        <div class="header-right">
+            <div><i class="ms-Icon settings"></i></div>
+            <div> <i class="material-icons-outlined question-mark">question_mark</i></div>
+            <div> <i class="ms-Icon megaphone"></i></div>
+            <div> <span class="profile-img">N</span></div>
+        </div>
+    </header>
+
+    <div id="container-left" class="container-left-close">
+        <nav id="content">
+            <ul class="left-list">
+                <li id="my-day">
+                    <div class="list-row">
+                        <div><i class="ms-Icon"></i></div>
+                        <div><span>My Day</span></div>
+                        <div><span id="myday-count"></span></div>
+
+                    </div>
+                </li>
+                <li id="important">
+                    <div class="list-row">
+                        <div><i class="ms-Icon"></i></div>
+                        <div><span>Important</span></div>
+                        <div><span id="important-count"></span></div>
+                    </div>
+
+                </li>
+                <li id="planned">
+                    <div class="list-row">
+                        <div><i class="ms-Icon"></i></div>
+                        <div><span>Planned</span></div>
+                    </div>
+                </li>
+                <li id="assigned">
+                    <div class="list-row">
+                        <div> <i class="ms-Icon assigned"></i></div>
+                        <div> <span>Assigned to me</span></div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="list-row">
+                        <div> <i class="ms-Icon blue-icon"></i></div>
+                        <div> <span>Flagged email</span></div>
+                    </div>
+                </li>
+                <li id="tasks">
+                    <div class="list-row">
+                        <div> <i class="ms-Icon blue-icon"></i></div>
+                        <div> <span>Tasks</span></div>
+                        <div><span id="task-count"></span></div>
+
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="add-list-left">
+            <div class="ul-container">
+                <ul id="added-list"></ul>
+            </div>
+            <div class="input-container">
+                <div class="input">
+                    <div><i class="ms-Icon blue-icon"></i></div>
+                    <div><input type="text" name="" id="new-list" placeholder="New List"></div>
+                </div>
+                <div class="input-button">
+                    <button><img src="createGroup" alt="add"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="left-footer">
+            <div>
+                <i class="ms-Icon"></i>
+            </div>
+            <div>
+                <i class="ms-Icon"></i>
+            </div>
+            <div>
+                <i class="ms-Icon"></i>
+            </div>
+            <div>
+                <i class="ms-Icon"></i>
+            </div>
+            <div>
+                <i class="ms-Icon todo-icon"></i>
+            </div>
+        </div>
+    </div>
+    <div id="open-button">
+        <button id="open-nav" class="opan-nav-close">
+            <i class="ms-Icon open-nav-btn"></i>
+        </button>
+    </div>
+    <div id="middle-container" class="middle-left-close">
+        <div class="middle-header">
+            <div class="row-heading">
+                <div id="list-title" class="list-title-close">
+                    <div id="title">
+                        <span>My Day</span>
+                    </div>
+                    <div>
+                        <i class="ms-Icon"></i>
+                    </div>
+                </div>
+                <div id="middle-right" class="flex-display">
+                    <div>
+                        <i class="ms-Icon open-nav-btn"></i>
+                        <span>Sort</span>
+                    </div>
+                    <div>
+                        <i class="ms-Icon open-nav-btn"></i>
+                        <span>Suggestions</span>
+                    </div>
+                </div>
+            </div>
+            <div id="date" class="date-left-close block-display">
+                <span>Saturday,February 12</span>
+            </div>
+        </div>
+        <div id="middle-content">
+            <div id="add-task">
+                <div id="task-input">
+                    <div><i class="ms-Icon"></i></div>
+                    <div id="add-task-input"><input type="text" name="" id="new-task" placeholder="Add a Task"></div>
+                </div>
+                <div id="submit" class="no-display">
+                    <div class="submit-left">
+                        <div><i class="ms-Icon"></i></div>
+                        <div><i class="ms-Icon"></i></div>
+                        <div><i class="ms-Icon"></i></div>
+                    </div>
+                    <div class="submit-right">
+                        <span id="add-task-btn">Add</span>
+                    </div>
+                </div>
+            </div>
+            <div id="task-display" class="add-task-before">
+                <div id="background-lines">
+                    <div class="task-row"></div>
+                    <div class="task-row"></div>
+                    <div class="task-row"></div>
+                    <div class="task-row"></div>
+                    <div class="task-row"></div>
+                    <div class="task-row"></div>
+                    <div class="task-row"></div>
+                    <div class="task-row"></div>
+                    <div class="task-row"></div>
+                    <div class="task-row"></div>
+                    <div class="task-row"></div>
+                    <div class="task-row"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-right">
+        <div id="right-content">
+            <div id="task-heading">
+                <div class="checkbox"><i class="ms-Icon "></i></div>
+                <div><span id="heading-content"></span></div>
+            </div>
+            <div class="add-step-task">
+                <div class="ul-container">
+                    <ul id="added-steptask">
+                        <li class="steptask-li"></li>
+                        <li class="steptask-li"></li>
+                        <li class="steptask-li"></li>
+                        <li class="steptask-li"></li>
+                        <li class="steptask-li"></li>
+                        <li class="steptask-li"></li>
+
+                    </ul>
+                </div>
+                <div class="input-container right">
+                    <div class="step-input">
+                        <div><i class="ms-Icon blue-icon"></i></div>
+                        <div><input type="text" name="" id="new-step" placeholder="Add Step"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="add-to-myday">
+            <div class="myday-right">
+                <div class="list-row">
+                    <div><i class="ms-Icon"></i></div>
+                    <div><span>My Day</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="remainders">
+            <div class="list-row">
+                <div><i class="ms-Icon"></i></div>
+                <div><span>Remind me</span></div>
+            </div>
+            <div class="list-row">
+                <div><i class="ms-Icon"></i></div>
+                <div><span>Add due date</span></div>
+            </div>
+            <div class="list-row">
+                <div><i class="ms-Icon"></i></div>
+                <div><span>Repeat</span></div>
+            </div>
+        </div>
+        <div class="delivery">
+            <div class="list-row">
+                <div><i class="ms-Icon"></i></div>
+                <div><span>Pick a Delivery</span></div>
+            </div>
+        </div>
+        <div class="attach">
+            <div class="list-row">
+                <div><i class="ms-Icon"></i></div>
+                <div><span>Add file</span></div>
+            </div>
+        </div>
+        <div class="notes">
+            <div><input type="text" id="side-notes" placeholder="Add notes"></div>
+        </div>
+    </div>
+    <script src="todo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,634 @@
+body{
+    height: 100%;
+    margin: 0;
+    font-family: SegoeUI-SemiBold-final,Segoe UI Semibold,SegoeUI-Regular-final,Segoe UI,"Segoe UI Web (West European)",Segoe,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Tahoma,Helvetica,Arial,sans-serif;;
+
+}
+
+.header{
+    position: absolute;
+    height: 5.6%;
+    width: 100%;
+    background-color: #0278D7;
+    display: flex;
+    color: white;
+}
+
+.header .header-left{
+    float: left;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    
+}
+
+.header .header-right{
+    height: 100%;
+    position: absolute;
+    display: flex;
+    right: 0;
+}
+
+.header .header-middle{
+    position: absolute;
+    height: 100%;
+    width: 23.7%;
+    left: 47.5%;
+    transform: translateX(-50%);
+}
+
+.ms-Icon{
+    font-weight:100;
+    margin: 17px 17px 18px 17px;
+    font-size: 17.5px;
+    color: grey;
+}
+
+.header .ms-Icon{
+    color: white;
+}
+
+.search-bar{
+    position: absolute;
+    height: 35px;
+    width: 100%;
+    margin: 9px auto auto;
+    border-radius: 2px;
+    border: 0px;
+    background-color: #C3DCF7;
+}
+
+.search-icon{
+    position: absolute;
+    margin: 17px 17px 18px 10px;
+    color:#3B83F1 ;
+    font-weight: lighter;
+    border: 0px;
+}
+
+.header-right .profile-img{
+    width: 29px;
+    height:26px;
+    position: relative;
+    top: 15px;
+    text-align: center;
+    margin: 8px 9px;
+    padding: 6px 10px;
+    border:1px solid white;
+    border-radius: 60%;
+    font-weight: 100;
+}
+
+.header-left .page-title{
+    font-weight: 550;
+    height: 100%;
+    width: 50px;
+    padding: 15px 16px 13px 5px;
+    font-size: 18px;
+}
+
+.header-right .ms-Icon{
+    font-weight:100;
+    font-size: 18px;
+}
+
+.header-right .question-mark{
+    margin: 14px 15px 15px 15px;
+}
+
+.header-right div{
+    height: 100%;
+}
+
+.header-right div:hover{
+    background-color: #06062941;
+}
+
+#middle-container{
+    height: 94.4%;
+    /* width: 100%; */
+    position: absolute;
+    top: 5.6%;
+    /* left: 0; */
+}
+
+#open-nav{
+    position: relative;
+    top:0;
+    /* left:0; */
+    color: rgba(53, 53, 53, 0.712);
+    border: white;
+    /* background-color: white; */
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 2px;
+    margin-left: 17px;
+    margin-right: 5px;
+}
+
+.menu-button{
+    margin:23px 0px 10px 9px;
+    width: fit-content;
+}
+
+#open-nav .open-nav-btn, #close-nav .close-nav-btn{
+    margin: 0;
+}
+
+#open-nav:hover{
+    background-color: rgba(211, 211, 211, 0.24);
+    border:1px solid rgba(211, 211, 211, 0.432);
+}
+
+#container-left{
+    position: absolute;
+    /* width: 0%; */
+    height: 94.4%;
+    z-index: 1;
+    top: 53px;
+    /* left: -20%; */
+    background-color: #F4F4F4;
+}
+
+.list-row{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#close-nav{
+    position: absolute;
+    color: rgba(53, 53, 53, 0.712);
+    border: white;
+    background-color: #F4F4F4;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    margin:23px 15px 15px 9px;
+    z-index: 2;
+
+}
+
+#container-left ul, .container-right ul{
+    list-style-type:none;
+    padding: 0;
+}
+
+#content{
+    position: relative;
+    top: 55px;
+    height: 27%;
+}
+
+.left-list .ms-Icon, #task-input .ms-Icon{
+    margin: 10px 13px 11px 17px;
+    padding-top: 2px;
+    font-size: 17px;
+    color: grey;
+}
+
+.left-list span{
+    font-size: 15px;
+    padding: 2px;
+
+}
+
+.left-list .assigned{
+    color: green;
+}
+
+.left-list .blue-icon, .blue-icon{
+    color: blue;
+}
+
+.left-footer{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    height: 6%;
+}
+
+.left-footer .ms-Icon{
+    margin: 17px 23.5px 18px 23.5px;
+}
+
+.todo-icon{
+    color: rgba(0, 0, 255, 0.548);
+}
+
+.left-list li:hover,.input:hover, .new-list:hover, .add-list-left li:hover{
+    background-color:rgba(255, 255, 255, 0.651);
+    cursor: pointer;
+}
+
+.left-footer div:hover{
+    background-color:rgba(211, 211, 211, 0.267) ;
+    cursor: pointer;
+}
+
+.middle-header{
+    display: block;
+    position: absolute;
+    width: 97%;
+    height: 6%;
+    padding: 1% 2% 1% 1%;
+    align-items: center;
+}
+
+.row-heading{
+    display: flex;
+    height: 80%;
+    width: 100%;
+    align-items: center;
+
+}
+
+#close-nav:hover{
+    background-color: white;
+    border:1px solid rgba(211, 211, 211, 0.432);
+    border-radius: 3px;
+}
+
+#title{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#open-button{
+    position: absolute;
+    top: 8%;
+    height: 35px;
+    width:55px;
+    z-index: 2;
+}
+
+#list-title{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    /* left: 60px; */
+}
+
+#middle-right{
+    /* display: flex; */
+    /* display: inherit; */
+    position: absolute;
+    align-items: center;
+    right: 1.6%;
+    color: rgba(0, 0, 0, 0.699);
+}
+
+#middle-right .ms-Icon{
+    margin: 17px 0px 18px 17px;
+    font-size: 18px;
+}
+
+#date{
+    font-size: 13px;
+    position: absolute;
+    /* left: 60px; */
+}
+
+#add-task{
+    position: absolute;
+    display: block;
+    width: 99%;
+    height: 7.8%;
+    left: 0.5%;
+    background-color: #F5F5F5;
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    color: grey;
+}
+
+#middle-content{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    top: 10%;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    width: 85%;
+}
+
+#new-list {
+    border: 0px;
+    background-color: #F4F4F4;
+    width: 90%;
+}
+
+.add-list-left{
+    display: block;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    top: 55px;
+    height: 58%;
+}
+
+.add-list-left img{
+    width: 25px;
+    height: 25px;
+    border: #F4F4F4;
+}
+
+.add-list-left button{
+    border: #F4F4F4;
+    margin: 0px 5px;
+}
+
+.input-button{
+    width: 15%;
+}
+
+.add-list-left input:focus, .step-input input, .notes input{
+    outline: none;
+}
+
+.add-list-left input, #task-input input{
+    font-size: 15px;
+}
+
+.input div:hover, #new-list:hover{
+    background-color:rgba(255, 255, 255, 0.651);
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+}
+
+.added-list .ms-Icon{
+    color: blue;
+}
+
+.ul-container{
+    overflow: auto;
+    max-height: 89%;
+}
+
+#task-input{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#add-task-input{
+    width: 100%;
+    align-items: center;
+}
+
+#new-task{
+    border: 0px;
+    background-color: #F4F4F4;
+    width: 100%;
+    padding:0.8% 0.5%;
+    margin: 0.5% 0%;
+}
+
+/* .submit-task-open{
+    display: none;
+} */
+
+.submit-left{
+    display: flex;
+    padding-left: 35px;
+}
+
+#submit .ms-Icon{
+    margin: 5px 10px 5px 10px;
+
+}
+
+#task-input .ms-Icon{
+    margin: 10px 5px 11px 17px;
+    
+}
+
+#task-display{
+    position: relative;
+    display: grid;
+    width: 98%;
+
+    padding: 0% 1%;
+}
+
+#background-lines{
+    background: linear-gradient(rgb(252, 252, 252) 99%, rgba(0,0,0,0) 1%), #ccc;
+    background-size:auto 8%;
+
+}
+
+.submit-right{
+    position: absolute;
+    right: 1%;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#task-input input:focus{
+    outline: none;
+    box-shadow:  0px 2px 0 -1px blue ;
+}
+
+.task-row{
+    height: 8%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.completed{
+    position: absolute;
+    left: 0.8%;
+    top: 0.6%;
+    font-size: 9px;
+    transition: opacity 100s;
+    color: white;
+    z-index: 0;
+}
+
+.checkbox .not-completed{
+    margin: 17px 17px 18px 8px;
+    color: blue;
+    font-size: 20px;
+}
+
+.checkbox:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.not-complete:hover{
+    cursor: pointer;
+}
+
+.container-right{
+    display: none;
+    width: 0%;
+    right: -300px;
+    position: absolute;
+    overflow: auto;
+    height: 94.2%;
+    top: 53px;
+    background-color: #F4F4F4;
+    border: 0.1px solid rgba(128, 128, 128, 0.219);
+}
+
+#task-heading{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 1% 0%;
+}
+
+.step-input{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#new-step{
+    width: 100%;
+}
+
+.input-container.right{
+    width: 100%;
+}
+
+.step-input input{
+    width: 100%;
+    border: 0px;
+    background-color: white;
+}
+
+#right-content, .add-to-myday, .remainders, .delivery, .attach{
+    background-color: white;
+    color: rgba(0, 0, 0, 0.61);
+    width: 94%;
+    margin: 2% 3%;
+    border: 0.1px solid rgba(128, 128, 128, 0.219);
+    border-radius: 5px;
+}
+
+.notes input{
+    width: 100%;
+    border: 0px;
+    font-size: 17px;
+}
+
+.notes{
+    align-items: center;
+    background-color: white;
+    width: 84%;
+    margin: 0% 3%;
+    border: 0.1px solid rgba(128, 128, 128, 0.219);
+    min-height: 10%;
+    padding: 3% 5%;
+}
+
+.open-right-container{
+    display: block;
+    right: 0%;
+    width: 21%;
+}
+
+#task-count,#important-count,#myday-count{
+    position: absolute;
+    right: 3%;
+    bottom: 20%;
+}
+
+.task-row:hover{
+    background-color: #F5F5F5;
+}
+
+.task-completed{
+    text-decoration: line-through;
+}
+
+.no-display{
+    display: none;
+}
+
+.block-display{
+    display: block;
+}
+
+.flex-display{
+    display: flex;
+}
+
+.color-green{
+    color: green;
+}
+
+.color-blue{
+    color: blue;
+}
+
+.color-blsck{
+    color: black;
+}
+
+.container-left-open{
+    left : 0px;
+    width : 17.3%;
+}
+
+.container-left-close{
+    left : -20%;
+    width : 0%;
+}
+
+.middle-left-open{
+    width: 82.7%;
+    left: 17.3%;
+}
+
+.middle-left-close{
+    width: 100%;
+    left: 0%;
+}
+
+.date-left-close{
+    left: 60px;
+}
+
+.date-left-open{
+    left: 25px;
+}
+
+.open-nav-open{
+    left: -10px;
+    background-color: #F4F4F4;
+}
+
+.open-nav-close{
+    left: 0;
+    background-color: white;
+}
+
+.list-title-open{
+    left: 25px;
+}
+
+.list-title-close{
+    left: 60px;
+}
+
+.add-task-onclick{
+    height: 86%;
+    top: 14%;
+}
+
+.add-task-before{
+    height: 92.2%;
+    top: 7.8%;
+}
