@@ -1,0 +1,66 @@
+<div class="display">
+  <div class="display-left">
+    <div class="heading">
+      <div><span>Connections</span></div>
+    </div>
+    <div class="friend-list">
+      <div class="friend-list-row" *ngFor="let friend of currentUser.friends">
+        <div class="pointer" routerLink="/profile/{{ users.get(friend)!.id }}">
+          <div><img src="{{ users.get(friend)!.picture }}" /></div>
+        </div>
+        <div class="details">
+          <span class="name">{{ users.get(friend)!.name }}</span
+          ><br />
+          <span class="education">{{ users.get(friend)!.education }}</span>
+        </div>
+        <div class="list-right">
+          <button class="msg-btn">Message</button>
+          <div><i class="material-icons-round"> more_horiz </i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="display-right">
+    <div class="advertisement">
+      <img src="/assets/images/ad.png" alt="advertisement" />
+    </div>
+    <div class="footer">
+      <div class="contact-info">
+        <div>
+          <span class="contact-line"
+            ><span>About</span
+            >&nbsp;&nbsp;&nbsp;&nbsp;<span>Accessibility</span>&nbsp;&nbsp;&nbsp;
+            <span>Help Center</span></span
+          >
+        </div>
+        <div>
+          <span class="contact-line"
+            ><span>Privacy & Terms</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+              >Ad Choices</span
+            ></span
+          >
+        </div>
+        <div>
+          <span class="contact-line"
+            ><span>Advertising</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+              >Business Services</span
+            ></span
+          >
+        </div>
+        <div>
+          <span class="contact-line"
+            ><span>Get the LinkedIn app</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+              >More</span
+            >
+          </span>
+        </div>
+        <div class="copyright">
+          <span class="contact-line"
+            ><i class="ms-Icon"></i
+            ><span>LinkedIn Corporation © 2022</span></span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,141 @@
+<div class="profile-page">
+  <div class="profile">
+    <div class="basic-info">
+      <div class="background-image"></div>
+      <div class="profile-img">
+        <img src="{{ currentUser.picture }}" alt="profile" />
+        <div class="user-info">
+          <div class="edit-icon pointer">
+            <i class="material-icons-outlined edit">edit</i>
+          </div>
+          <div class="intro">
+            <span class="name">{{ currentUser.name }}</span
+            ><br />
+            <span class="education">{{ currentUser.education[0] }}</span>
+          </div>
+          <div class="connections">
+            <span class="connection-count hover pointer"
+              >{{ currentUser.friends!.length }} Connections</span
+            >
+          </div>
+          <div class="buttons">
+            <button class="btn open-btn">Open to</button>
+            <button class="btn add-pro-btn">Add profile Section</button>
+            <button class="btn more-btn">More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="activity">
+      <div class="heading-activity">
+        <span class="activity-name">Analytics</span><br />
+        <span class="private"
+          ><i class="material-icons-round visibility">visibility</i>Private to
+          you</span
+        >
+      </div>
+      <div class="activity-content">
+        <div>
+          <span><i class="material-icons-round group"> group </i></span>
+        </div>
+        <div>
+          <span class="views">4 profile views</span><br />
+          <span class="extra">Discover who's viewed your <br />profile.</span>
+        </div>
+      </div>
+    </div>
+    <div class="resources">
+      <div class="heading-resource">
+        <span class="activity-name">Resources</span><br />
+        <span class="private"
+          ><i class="material-icons-round visibility">visibility</i>Private to
+          you</span
+        >
+      </div>
+      <div class="activity-content pointer">
+        <div>
+          <span><i class="material-icons-round group"> group </i></span>
+        </div>
+        <div>
+          <span class="views">Creator Mode</span><br />
+          <span class="extra"
+            >Get discovered, showcase content on your profile, and get access to
+            creator toolsGet discovered, showcase content on your profile, and
+            get access to creator tools
+          </span>
+        </div>
+      </div>
+      <div class="activity-content pointer">
+        <div>
+          <span><i class="material-icons-round group"> group </i></span>
+        </div>
+        <div>
+          <span class="views">My Network</span><br />
+          <span class="extra"
+            >See and manage your connections and interests.See and manage your
+            connections and interests.</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="display-right">
+    <div class="advertisement pointer">
+      <img src="/assets/images/ad.png" alt="advertisement" />
+    </div>
+    <div class="advertisement2">
+      <div>
+        <span class="activity-name">Job seeker guidance</span><br />
+        <span class="private">Recommended based on your activity</span>
+      </div>
+      <div class="ad2-row pointer">
+        <div><span class="resume">I want to improve my resume</span></div>
+        <div><img src="/assets/images/ad2.jpeg" /></div>
+      </div>
+      <div>
+        <span class="resume show-more hover pointer"
+          >Show More&nbsp;<i class="material-icons-round visibility show-more"
+            >east</i
+          ></span
+        >
+      </div>
+    </div>
+    <div class="footer">
+      <div class="contact-info">
+        <div>
+          <span class="contact-line"
+            ><span>About</span
+            >&nbsp;&nbsp;&nbsp;&nbsp;<span>Accessibility</span>&nbsp;&nbsp;&nbsp;
+            <span>Help Center</span></span
+          >
+        </div>
+        <div>
+          <span class="contact-line"
+            ><span>Privacy & Terms</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+              >Ad Choices</span
+            ></span
+          >
+        </div>
+        <div>
+          <span class="contact-line"
+            ><span>Advertising</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+              >Business Services</span
+            ></span
+          >
+        </div>
+        <div>
+          <span class="contact-line"
+            ><span>Get the LinkedIn app</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+              >More</span
+            >
+          </span>
+        </div>
+        <div class="copyright">
+          <span class="contact-line"
+            ><i class="ms-Icon"></i
+            ><span>LinkedIn Corporation © 2022</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

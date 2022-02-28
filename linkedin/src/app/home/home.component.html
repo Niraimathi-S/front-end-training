@@ -1,0 +1,277 @@
+<div class="home-content">
+  <div class="home-left">
+    <div class="profile-home">
+      <div class="background-image"></div>
+      <div class="profile pointer" routerLink="/profile/{{ currentUser.id }}">
+        <div class="profile-img">
+          <img src="{{ currentUser.picture }}" alt="profile" />
+        </div>
+        <div>
+          <p class="name">{{ currentUser!.name }}</p>
+        </div>
+      </div>
+      <div class="details">
+        <p class="education">{{ currentUser!.education }}</p>
+      </div>
+      <div class="connections pointer"  routerLink="/myNetwork/2">
+        <div><span>My Connections</span></div>
+        <div>{{ currentUser!.friends!.length }}</div>
+      </div>
+      <div class="premium">
+        <div>
+          <span class="premium-access">Access exclusive tools & insights</span>
+        </div>
+        <div class="premium-star">
+          <span class="premiun-retry"
+            ><i class="material-icons-round gold"> hotel_class </i>Retry premium
+            Free</span
+          >
+        </div>
+      </div>
+      <div class="items">
+        <div>
+          <div class="items-title">
+            <div><i class="material-icons-round"> bookmark </i></div>
+            <div><span> My Items</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popular-tags">
+      <div class="section">
+        <p class="heading">Recent</p>
+        <ul>
+          <li>
+            <div><i class="material-icons-round hashtag">tag</i></div>
+            <div>jobpostings</div>
+          </li>
+          <li>
+            <div><i class="material-icons-round hashtag">tag</i></div>
+            <div>emotionalintelligence</div>
+          </li>
+          <li>
+            <div><i class="material-icons-round hashtag">tag</i></div>
+            <div>mechanicalengineering</div>
+          </li>
+          <li>
+            <div><i class="material-icons-round hashtag">tag</i></div>
+            <div>energy</div>
+          </li>
+          <li>
+            <div><i class="material-icons-round hashtag">tag</i></div>
+            <div>intelligence</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <p class="heading heading-blue">Groups</p>
+      </div>
+      <div class="section">
+        <p class="heading heading-blue">Events</p>
+      </div>
+      <div class="section">
+        <p class="heading heading-blue">Followed Hashtags</p>
+        <ul>
+          <li>
+            <div><i class="material-icons-round hashtag">tag</i></div>
+            <div>jobpostings</div>
+          </li>
+          <li>
+            <div><i class="material-icons-round hashtag">tag</i></div>
+            <div>emotionalintelligence</div>
+          </li>
+          <li>
+            <div><i class="material-icons-round hashtag">tag</i></div>
+            <div>mechanicalengineering</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="posts">
+    <input
+      type="file"
+      class="file-input"
+      (change)="onFileSelected($event)"
+      #fileUpload
+    />
+    <div class="add-post">
+      <div class="input">
+        <div><img src="{{ currentUser.picture }}" /></div>
+        <div><input type="text" placeholder="Start a Post" /></div>
+      </div>
+      <div class="add-options">
+        <div class="option pointer" (click)="fileUpload.click()">
+          <div><i class="material-icons-round add-photo"> image </i></div>
+          <span>Photo</span>
+        </div>
+        <div class="option pointer">
+          <div>
+            <i class="material-icons-round add-video"> smart_display </i>
+          </div>
+          <span>Video</span>
+        </div>
+        <div class="option pointer">
+          <div><i class="material-icons-round add-event"> event </i></div>
+          <span>Event</span>
+        </div>
+        <div class="option pointer">
+          <div><i class="material-icons-round add-article"> newspaper </i></div>
+          <span>Write Article</span>
+        </div>
+      </div>
+    </div>
+    <div class="post-display">
+      <div *ngFor="let segment of posts.reverse()" class="post">
+        <div class="post-author">
+          <div
+            class="author-profile pointer"
+            routerLink="/profile/{{ users.get(segment.author)!.id }}"
+          >
+            <img src="{{ users.get(segment.author)!.picture }}" />
+          </div>
+          <div class="author-details">
+            <div class="author-name">
+              <span>{{ users.get(segment.author)!.name }}</span>
+            </div>
+            <div class="author-edu">
+              <span>{{ users.get(segment.author)!.education }}</span>
+            </div>
+            <div class="post-time">
+              <span>{{ segment.detaAndTime }} •&nbsp;</span>
+              <div><i class="material-icons-round public">public</i></div>
+            </div>
+          </div>
+        </div>
+        <div class="post-status">
+          <span>{{ segment.status }}</span>
+        </div>
+        <div class="post-content">
+          <img src="{{ segment.mediaLink }}" alt="" />
+        </div>
+        <div class="post-extras">
+          <div class="likes">
+            <div class="like-count">
+              <div><i class="material-icons-round blue">recommend</i></div>
+              <div>
+                <span>{{ segment.likes }}</span>
+              </div>
+            </div>
+            <div class="comment-count">
+              <span>&nbsp;&nbsp;&nbsp;{{ segment.comments }} comments</span>
+            </div>
+          </div>
+          <div class="reaction">
+            <div class="reaction-row">
+              <div class="rows bottom-left pointer">
+                <div><i class="material-icons-round"> thumb_up </i></div>
+                <span>Like</span>
+              </div>
+              <div class="rows">
+                <div><i class="material-icons-round"> comment </i></div>
+                <span>Comment</span>
+              </div>
+              <div class="rows">
+                <div><i class="material-icons-round"> reply </i></div>
+                <span>Share</span>
+              </div>
+              <div class="rows bottom-right">
+                <div><i class="material-icons-round"> send </i></div>
+                <span>Send</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home-right">
+    <div class="news">
+      <div class="heading"><span>LinkedIn News</span></div>
+      <div class="news-content">
+        <ul>
+          <li>
+            <div>
+              <span class="news-heading">Rise of digital frauds in India</span
+              ><br />
+              <span class="time">22h ago • 1,560 readers</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span class="news-heading">Russia attacks Ukraine</span><br />
+              <span class="time">21m ago • 477,362 readers</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span class="news-heading">Is it ever OK to lie on your CV?</span
+              ><br />
+              <span class="time">22h ago • 8,370 readers</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span class="news-heading">BharatPe sacks head of controls</span
+              ><br />
+              <span class="time">22h ago • 1,560 readers</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span class="news-heading">Does WFH affect career growth?</span
+              ><br />
+              <span class="time">22h ago • 1,560 readers</span>
+            </div>
+          </li>
+        </ul>
+        <div class="btn-more">
+          <div><span> Show more</span></div>
+          <div><i class="material-icons-round"> expand_more </i></div>
+        </div>
+      </div>
+    </div>
+    <div class="advertisement">
+      <img src="/assets/images/ad.png" alt="advertisement" />
+    </div>
+    <div class="footer">
+      <div class="contact-info">
+        <div>
+          <span class="contact-line"
+            ><span>About</span
+            >&nbsp;&nbsp;&nbsp;&nbsp;<span>Accessibility</span>&nbsp;&nbsp;&nbsp;
+            <span>Help Center</span></span
+          >
+        </div>
+        <div>
+          <span class="contact-line"
+            ><span>Privacy & Terms</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+              >Ad Choices</span
+            ></span
+          >
+        </div>
+        <div>
+          <span class="contact-line"
+            ><span>Advertising</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+              >Business Services</span
+            ></span
+          >
+        </div>
+        <div>
+          <span class="contact-line"
+            ><span>Get the LinkedIn app</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+              >More</span
+            >
+          </span>
+        </div>
+        <div class="copyright">
+          <span class="contact-line"
+            ><i class="ms-Icon"></i
+            ><span>LinkedIn Corporation © 2022</span></span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
