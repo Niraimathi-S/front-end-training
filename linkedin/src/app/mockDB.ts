@@ -1,0 +1,118 @@
+import { Person, Post } from './models';
+
+export const USERS: Person[] = [
+  {
+    id: 1,
+    name: 'Mohana',
+    picture: '/assets/images/mohana.webp',
+    location: 'Thiruvanaikoil, Trichy',
+    education: ['B.tech-IT'],
+    friends: [2, 4, 8],
+    job: 'Infosys',
+  },
+  {
+    id: 2,
+    name: 'Nirai',
+    picture: '/assets/images/nirai.jpeg',
+    location: 'Tholudur, Cuddalore',
+    education: ['B.tech-IT'],
+    friends: [1, 3, 9, 8, 10],
+  },
+  {
+    id: 3,
+    name: 'Velu',
+    picture: '/assets/images/velu.webp',
+    location: 'Tholudur, Cuddalore',
+    education: ['B.Sc-CS'],
+    friends: [1, 4, 7],
+  },
+  {
+    id: 4,
+    name: 'Akshaya',
+    picture: '/assets/images/akshaya.jpeg',
+    location: 'Tholudur, Cuddalore',
+    education: ['B.Sc-CS'],
+    friends: [3, 7, 8],
+  },
+  {
+    id: 5,
+    name: 'Sankar',
+    picture: '/assets/images/defaultPic.jpeg',
+    location: 'Thirunelveli',
+    education: ['B.E-ECE'],
+    friends: [3, 9],
+  },
+  {
+    id: 6,
+    name: 'Sundari',
+    picture: '/assets/images/defaultPic.jpeg',
+    location: 'Vaitheeswarankoil, Nagapatima',
+    education: ['B.tech-IT'],
+    friends: [9, 10],
+  },
+  {
+    id: 7,
+    name: 'Abinaya',
+    picture: '/assets/images/abi.jpeg',
+    location: 'Thanjavur',
+    education: ['B.E-CSE'],
+    friends: [3, 9],
+  },
+  {
+    id: 8,
+    name: 'Sandhiya',
+    picture: '/assets/images/sandhiya.jpeg',
+    location: 'Perambalur',
+    education: ['B.E.CSE'],
+    friends: [2, 4, 9],
+  },
+  {
+    id: 9,
+    name: 'Piraveen',
+    picture: '/assets/images/defaultPic.jpeg',
+    location: 'Pennadam, Cuddalore',
+    education: ['MBBS'],
+    friends: [2, 4, 8],
+  },
+  {
+    id: 10,
+    name: 'Keerthani',
+    picture: '/assets/images/defaultPic.jpeg',
+    location: 'Pabanasam, Thanjavur',
+    education: ['B.E-ECE'],
+    friends: [1, 2, 7],
+  },
+];
+
+export const POSTS: Post[] = [
+  {
+    author: 2,
+    mediaLink: '/assets/images/post2.jpeg',
+    likes: 80,
+    detaAndTime: '2w',
+    comments: 13,
+  },
+  {
+    author: 8,
+    mediaLink: '/assets/images/post3.jpeg',
+    likes: 47,
+    detaAndTime: '3w',
+    comments: 54,
+  },
+  {
+    author: 10,
+    mediaLink: '/assets/images/post4.jpeg',
+    likes: 62,
+    detaAndTime: '3w',
+    comments: 40,
+    status:
+      'Freshworks is hiring for multiple sales roles such as #SDR, #insidesales (SMB), #fieldsales (Enterprise) and #ChannelSales.',
+  },
+  {
+    author: 8,
+    mediaLink: '/assets/images/post5.jpeg',
+    likes: 42,
+    detaAndTime: '3w',
+    comments: 34,
+  },
+];

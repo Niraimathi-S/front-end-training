@@ -1,0 +1,97 @@
+<div class="posts">
+  <input
+    type="file"
+    class="file-input"
+    (change)="onFileSelected($event)"
+    #fileUpload
+  />
+  <div class="add-post">
+    <div class="input">
+      <div><img src="{{ currentUser.picture }}" /></div>
+      <div><input type="text" placeholder="Start a Post" /></div>
+    </div>
+    <div class="add-options">
+      <div class="option pointer" (click)="fileUpload.click()">
+        <div><i class="material-icons-round add-photo"> image </i></div>
+        <span>Photo</span>
+      </div>
+      <div class="option pointer">
+        <div>
+          <i class="material-icons-round add-video"> smart_display </i>
+        </div>
+        <span>Video</span>
+      </div>
+      <div class="option pointer">
+        <div><i class="material-icons-round add-event"> event </i></div>
+        <span>Event</span>
+      </div>
+      <div class="option pointer">
+        <div><i class="material-icons-round add-article"> newspaper </i></div>
+        <span>Write Article</span>
+      </div>
+    </div>
+  </div>
+  <div class="post-display">
+    <div *ngFor="let segment of posts.reverse()" class="post">
+      <div class="post-author">
+        <div
+          class="author-profile pointer"
+          routerLink="/profile/{{ findUser(segment.author)!.id }}"
+        >
+          <img src="{{ findUser(segment.author)!.picture }}" />
+        </div>
+        <div class="author-details">
+          <div class="author-name">
+            <span>{{ findUser(segment.author)!.name }}</span>
+          </div>
+          <div class="author-edu">
+            <span>{{ findUser(segment.author)!.education }}</span>
+          </div>
+          <div class="post-time">
+            <span>{{ segment.detaAndTime }} •&nbsp;</span>
+            <div><i class="material-icons-round public">public</i></div>
+          </div>
+        </div>
+      </div>
+      <div class="post-status">
+        <span>{{ segment.status }}</span>
+      </div>
+      <div class="post-content">
+        <img src="{{ segment.mediaLink }}" alt="" />
+      </div>
+      <div class="post-extras">
+        <div class="likes">
+          <div class="like-count">
+            <div><i class="material-icons-round blue">recommend</i></div>
+            <div>
+              <span>{{ segment.likes }}</span>
+            </div>
+          </div>
+          <div class="comment-count">
+            <span>&nbsp;&nbsp;&nbsp;{{ segment.comments }} comments</span>
+          </div>
+        </div>
+        <div class="reaction">
+          <div class="reaction-row">
+            <div class="rows bottom-left pointer" (click)="addLike(segment)">
+              <div><i class="material-icons-round"> thumb_up </i></div>
+              <span>Like</span>
+            </div>
+            <div class="rows">
+              <div><i class="material-icons-round"> comment </i></div>
+              <span>Comment</span>
+            </div>
+            <div class="rows">
+              <div><i class="material-icons-round"> reply </i></div>
+              <span>Share</span>
+            </div>
+            <div class="rows bottom-right">
+              <div><i class="material-icons-round"> send </i></div>
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

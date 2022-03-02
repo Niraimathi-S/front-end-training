@@ -5,13 +5,13 @@
     </div>
     <div class="friend-list">
       <div class="friend-list-row" *ngFor="let friend of currentUser.friends">
-        <div class="pointer" routerLink="/profile/{{ users.get(friend)!.id }}">
-          <div><img src="{{ users.get(friend)!.picture }}" /></div>
+        <div class="pointer" routerLink="/profile/{{ findUser(friend)!.id }}">
+          <div><img src="{{findUser(friend)!.picture }}" /></div>
         </div>
         <div class="details">
-          <span class="name">{{ users.get(friend)!.name }}</span
+          <span class="name">{{findUser(friend)!.name }}</span
           ><br />
-          <span class="education">{{ users.get(friend)!.education }}</span>
+          <span class="education">{{findUser(friend)!.education }}</span>
         </div>
         <div class="list-right">
           <button class="msg-btn">Message</button>

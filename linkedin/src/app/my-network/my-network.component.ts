@@ -1,23 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MockDB } from '../mockDB.service';
-import { Person } from '../person.model';
+import { AppService } from '../appService.service';
+import { Person } from '../models';
 
 @Component({
   selector: 'app-my-network',
   templateUrl: './my-network.component.html',
-  styleUrls: ['./my-network.component.css']
+  styleUrls: ['./my-network.component.css'],
 })
 export class MyNetworkComponent implements OnInit {
-  id:number = 0;
-  users:Map<number,Person> = new Map<number,Person>();
-  currentUser:any;
-  constructor(private route:ActivatedRoute,private db:MockDB) { 
-  }
+  private id: number = 0;
+  public users!: Person[];
+  public currentUser!: Person;
+  public findUser: any;
+  constructor(private route: ActivatedRoute, private appService: AppService) {}
 
   ngOnInit(): void {
-    this.id=Number(this.route.snapshot.paramMap.get("id"));
-    this.users =  this.db.USERS;
-    this.currentUser = this.db.USERS.get(this.id)!;
+    this.id = Number(this.route.snapshot.paramMap.get('id'));
+    this.users = this.appService.getUsers();
+    this.currentUser = this.appService.findUser(this.id)!;
+    this.findUser = this.appService.findUser;
   }
 }

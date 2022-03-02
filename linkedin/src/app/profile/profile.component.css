@@ -31,14 +31,9 @@
 }
 
 .background-image img {
-  height: 100%;
-  width: 100%;
-}
-
-.profile-img img {
-  position: absolute;
-  top: 31.5vh;
-  left: 17.5vh;
+  position: relative;
+  top: 18vh;
+  left: 4vh;
   width: 152px;
   height: 152px;
   border-radius: 50%;
